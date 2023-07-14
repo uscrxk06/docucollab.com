@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head" .}}
+
+  <body class="bg-slate-100 dark:bg-zinc-900">
+    <!--Header-->
+    {{partial "header.html" .}}
+    <!--End header-->
+    <div class="container mx-auto p-10 mt-10">
+      {{ block "main" .}} {{ end }}
+    </div>
+
+    <!--Footer-->
+    <footer
+      class="container mx-auto p-10 text-zinc-400 border-t border-zinc-800"
+    >
+      <div
+        class="grid lg:grid-cols-2 md:gri-cols-2 grid-cols-1 lg:justify-between md:justify-between sm:justify-centerpy-6"
+      >
+        <p class="lg:text-left md:text-left text-center">
+          Copyright © 2023 DocuCollab. |
+          <a href="" class="hover:text-blue-400">Request a demo</a> |
+          <a href="" class="hover:text-blue-400">Blog </a> |
+          <a href="" class="hover:text-blue-400">Terms & conditions</a>
+        </p>
+        <div>
+          <ul
+            class="flex gap-3 lg:justify-end md:justify-end justify-center lg:mt-0 md:mt-0 mt-3"
+          >
+            <li>
+              <a href="https://twitter.com/docucollab" target="_blank"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://facebook.com/DocuCollab" target="_blank"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/docucollab "
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!--End footer-->
+
+    <!--Alpine -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"
+      defer
+    ></script>
+
+    <!--Main-->
+    <script src="/js/dark.js"></script>
+    <script src="/js/main.js"></script>
+
+    <!--Swiper js-->
+  </body>
+</html>

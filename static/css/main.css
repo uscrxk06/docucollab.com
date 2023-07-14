@@ -1,0 +1,7 @@
+.transaction-speed {
+  transition-duration: 0.5s;
+}
+
+.transaction {
+  transition: all 0.6s;
+}

@@ -1,0 +1,121 @@
+{{define "main"}}
+
+<!--Contact section-->
+<div class="py-10">
+  <div
+    class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:px-6 md:px-4 px-0"
+  >
+    <div class="justify-start">
+      <h2
+        class="lg:text-4xl md:text-2xl text-xl dark:text-white lg:px-6 md:px-4 px-0"
+      >
+        <strong>GET IN TOUCH</strong>
+      </h2>
+      <form class="mx-auto rounded-lg lg:px-6 md:px-4 px-0 py-4 text-start">
+        <div class="mb-6">
+          <label
+            for="name"
+            class="block text-zinc-400 dark:text-zinc-200 mb-1 text-sm"
+            >Name:</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="w-full px-3 py-2 bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-sm"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+
+        <div class="lg:flex md:flex inline-block gap-3 w-full">
+          <div class="mb-4 w-full">
+            <label
+              for="email"
+              class="block text-zinc-400 dark:text-zinc-200 mb-1 text-sm"
+              >Email:</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full px-3 py-2 bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-sm"
+              placeholder="Enter your Email"
+              required
+            />
+          </div>
+          <div class="mb-4 w-full">
+            <label
+              for="email"
+              class="block text-zinc-400 dark:text-zinc-200 mb-1 text-sm"
+              >Email:</label
+            >
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="w-full px-3 py-2 bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-sm"
+              placeholder="Enter your phone Number"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label
+            for="message"
+            class="block text-zinc-400 dark:text-zinc-200 mb-1 text-sm"
+            >Message:</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            class="w-full px-3 py-2 border bg-zinc-100 dark:bg-zinc-900 border-zinc-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+            placeholder="Enter your message"
+            required
+          ></textarea>
+        </div>
+        <div class="flex justify-end">
+          <button
+            type="submit"
+            class="px-4 py-2 bg-blue-500 text-white font-bold rounded hover:bg-blue-600 transaction"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="lg:px-6 md:px-4 px-0 lg:py-0 md:py-0 py-6">
+      <h2 class="lg:text-4xl md:text-2xl text-xl dark:text-white">
+        <strong>CONTACT INFO</strong>
+      </h2>
+      <ul class="dark:text-zinc-200 mt-8">
+        <li class="mb-8">
+          <a
+            href="callto:+1-571-228-7037"
+            class="flex gap-3 items-center hover:text-blue-500 transaction"
+          >
+            <i class="fa-sharp fa-solid fa-phone"></i> +1-571-228-7037</a
+          >
+        </li>
+        <li class="mb-8">
+          <a
+            href="mailto:sales@docucollab.com"
+            class="flex gap-3 items-center hover:text-blue-500 transaction"
+            ><i class="fa-sharp fa-solid fa-envelope"></i>
+            sales@docucollab.com</a
+          >
+        </li>
+        <li class="mb-8">
+          <a class="flex gap-3 items-center hover:text-blue-500 transaction"
+            ><i class="fa-sharp fa-solid fa-location-dot"></i> 1604 Spring Hill
+            Road, Suite 216, Tysons, <br />
+            Virginia, 22182, USA</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{{end}}
