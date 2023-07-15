@@ -1,0 +1,172 @@
+{{define "main"}}
+<!---->
+<div class="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 article">
+  <div class="col-span-2">
+    <h2
+      class="text-zinc-600 dark:text-zinc-300 lg:text-3xl md:text-2xl text-xl font-bold mb-2 border-b pb-3 border-zinc-700"
+    >
+      {{.Title}}
+    </h2>
+    <div
+      class="order-first flex lg:flex-row md:flex-row flex-col lg:items-center md:items-center items-start text-base text-zinc-400 dark:text-zinc-500 mb-12"
+    >
+      <span
+        class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500 lg:block md:blobk hidden"
+      >
+      </span>
+      <span class="mx-3">{{ .Date.Format " Jan 2, 2006" }}</span>
+
+      <!---->
+      <span
+        class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500 lg:block md:blobk hidden"
+      >
+      </span>
+      <span class="mx-3"
+        ><i class="fa-solid fa-eye"></i> {{ .ReadingTime }} min</span
+      >
+
+      <!---->
+      <span
+        class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500 lg:block md:blobk hidden"
+      >
+      </span>
+      <span class="mx-3"
+        ><i class="fa-solid fa-user"></i> {{ .Params.author}}</span
+      >
+
+      <!---->
+      <span
+        class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500 lg:block md:blobk hidden"
+      >
+      </span>
+      {{ range .Params.category }}
+      <a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}'>
+        <span class="mx-3 hover:underline"> {{.}} </span></a
+      >
+      {{end}}
+    </div>
+    <article
+      class="text-zinc-600 dark:text-zinc-300 mb-12 border-b border-zinc-600 pb-6 hovertext-blue-600"
+    >
+      {{.Content}}
+    </article>
+    <div class="flex justify-between">
+      {{ with .PrevInSection }}
+      <a
+        class="text-blue-400 flex items-center transaction gap-3 hover:text-blue-600"
+        href="{{ .Permalink }}"
+        ><i class="fa-solid fa-circle-arrow-left"></i>
+        <div class="lg-block md:block hidden">{{ .Title }}</div></a
+      >
+      {{ end }}
+
+      <!---->
+      {{ with .NextInSection }}
+      <a
+        class="text-blue-400 flex items-center gap-3 transaction hover:text-blue-600"
+        href="{{ .Permalink }}"
+      >
+        <div class="lg-block md:block hidden">{{ .Title }}</div>
+        <i class="fa-solid fa-circle-arrow-right"></i
+      ></a>
+      {{ end }}
+    </div>
+  </div>
+  <div class="col-span-1 px-6">
+    <h4
+      class="text-zinc-600 dark:text-zinc-100 font-bold text-xl lg:block md:block hidden"
+    >
+      Book a Demo
+    </h4>
+    <iframe
+      src="https://BookingMitr.com/docucollab/discoverycall"
+      frameborder="0"
+      height="700px"
+      width="100%"
+      class="mt-3 lg:block md:block hidden"
+    ></iframe>
+
+    <!--Features post-->
+    <h4 class="text-zinc-600 dark:text-zinc-100 font-bold text-xl mt-12">
+      Recent Posts
+    </h4>
+
+    <hr class="border-zinc-600 my-2" />
+    <ul class="lg:block md:block hidden">
+      <li>
+        {{ $posts := .Site.GetPage "section" "blog" }}
+        <!---->
+        {{ range first 5 $posts.Pages }}
+        <a
+          href="{{.Permalink}}"
+          class="hover:underline dark:text-zinc-200 text-zinc-600"
+        >
+          <h3 class="text-md dark:text-zinc-200 text-zinc-600 font-bold mt-4">
+            {{.Title}}
+          </h3>
+          <div class="text-zinc-600 dark:text-zinc-100 py-3">
+            {{ $content := .Content }}
+            <!---->
+            {{ $words := split $content " " }}
+            <!---->
+            {{ $excerpt := "" }}
+            <!---->
+            {{ range $index, $word := $words }}
+            <!---->
+            {{ if lt $index 10 }}
+            <!---->
+            {{ $excerpt = printf "%s %s" $excerpt $word }}
+            <!---->
+            {{ end }}
+            <!---->
+            {{ end }}
+            <!---->
+            {{ $excerpt | safeHTML }}...
+          </div>
+          <hr class="border-zinc-700 w-2/3 mt-4 py-3" />
+        </a>
+        {{end}}
+      </li>
+    </ul>
+
+    <ul class="lg:hidden md:hidden block">
+      <li>
+        {{ $posts := .Site.GetPage "section" "blog" }}
+        <!---->
+        {{ range first 3 $posts.Pages }}
+        <a
+          href="{{.Permalink}}"
+          class="hover:underline dark:text-zinc-200 text-zinc-600"
+        >
+          <h3 class="text-md dark:text-zinc-200 text-zinc-600 font-bold mt-4">
+            {{.Title}}
+          </h3>
+          <div class="text-zinc-600 dark:text-zinc-100 py-3">
+            {{ $content := .Content }}
+            <!---->
+            {{ $words := split $content " " }}
+            <!---->
+            {{ $excerpt := "" }}
+            <!---->
+            {{ range $index, $word := $words }}
+            <!---->
+            {{ if lt $index 10 }}
+            <!---->
+            {{ $excerpt = printf "%s %s" $excerpt $word }}
+            <!---->
+            {{ end }}
+            <!---->
+            {{ end }}
+            <!---->
+            {{ $excerpt | safeHTML }}...
+          </div>
+          <hr class="border-zinc-700 w-2/3 mt-4 py-3" />
+        </a>
+        {{end}}
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!---->
+{{end}}

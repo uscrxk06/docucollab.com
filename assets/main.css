@@ -2,6 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "@tailwindcss/typography";
+
 .display-none {
   @apply hidden;
+}
+
+.article article h1,
+.article article h2,
+.article article h3,
+.article article h4 {
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.article article h1 {
+  font-size: 2.75rem;
+}
+
+.article article h2 {
+  font-size: 2.25rem;
+}
+
+.article article h3 {
+  font-size: 2rem;
+}
+.article article h4 {
+  font-size: 1.75rem;
+}
+.article article h5,
+.article article h6 {
+  font-size: 1.25rem;
+}
+
+.article article p {
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.article article a {
+  color: #3b82f6;
+}
+.article article a:hover {
+  text-decoration: underline;
+}
+
+.article article img {
+  padding: 3rem;
+  max-width: 100%;
+  border-radius: 2rem;
+}
+.article article ul {
+  list-style: disc;
+  margin: 2rem 0rem;
+  margin-left: 2rem;
+}
+.article article ul li {
+  padding: 1rem 0rem;
+}
+
+.article article blockquote {
+  background-color: #247cb62b;
+  font-size: 18px !important;
+  padding-left: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-left: 4px solid #3b82f6;
+  margin: 2rem 0rem;
 }
