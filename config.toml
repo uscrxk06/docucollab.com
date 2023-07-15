@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://docucollab-com.pages.dev/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 
