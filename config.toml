@@ -2,6 +2,51 @@ baseURL = 'https://docucollab-com.pages.dev/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "solution"
+    name = "Solutions"
+    url = "#"
+    weight = 2
+  
+  [[menu.main]]
+    identifier = "proposal-management"
+    name = "Proposal Management"
+    url = "/proposal-management-software/"
+    parent = "solution"
+    weight = 1
+  
+  [[menu.main]]
+    identifier = "contract_management"
+    name = "Contract Management"
+    url = "/contract-management-software/"
+    parent = "solution"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "Features and Benefits"
+    name = "Features and Benefits"
+    url = "/features-and-benefits/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "Blog"
+    name = "Blog"
+    url = "/blog/"
+    weight = 4
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact us"
+    url = "/contact-sales/"
+    weight = 5
+
 paginate = 10
 
 [taxonomies]

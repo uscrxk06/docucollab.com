@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>features-and-benefits</title>
+
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  
+  
+  <link rel="stylesheet" href="https://docucollab-com.pages.dev/style.css" />
+
+  
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+
+  <body class="bg-slate-100 dark:bg-zinc-900">
+    
+    <nav
+  class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
+>
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+  >
+    <a
+      href="/"
+      class="flex gap-3 items-center md:text-4xl sm:text-sm text-gray-800 dark:text-white"
+      ><img src="/img/logo.png" alt="DocuCollab Logo" class="h-12" />
+      DocuCollab</a
+    >
+    <div class="flex md:order-2">
+      <button
+        type="button"
+        id="triggerEl"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-sticky"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-5 h-5 transition-transform duration-200 transform"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            class="hamburger"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+          <path
+            class="cross hidden"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+      id="navbar-sticky"
+    >
+      <ul
+        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+      >
+        <li>
+          <a
+            href="#"
+            class="block py-2 pl-3 pr-4 text-white bg-zinc-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+            aria-current="page"
+            >Home</a
+          >
+        </li>
+        <li class="relative group">
+          <button
+            type="button"
+            class="block focus:border-none py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 focus:outline-none focus:ring-0 focus:ring-blue-500"
+            aria-expanded="false"
+          >
+            About
+            <svg
+              class="w-4 h-4 inline-block ml-1 -mt-1 transition-transform duration-200 transform rotate-180 group-hover:rotate-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 3.5a1 1 0 00-.707.293l-4 4a1 1 0 001.414 1.414L10 6.414l3.293 3.293a1 1 0 001.414-1.414l-4-4A1 1 0 0010 3.5z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <ul
+            class="absolute left-0 mt-2 ml-4 w-48 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-lg shadow-md hidden group-hover:block .transaction"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                >Our Team</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                >Mission</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    
+    <div class="container mx-auto p-10 mt-10">
+      
+
+
+<div class="text-center py-10">
+  <h2 class="text-5xl text-zinc-700 dark:text-zinc-300 font-bold mb-12">
+    Features and Benefits
+  </h2>
+
+  <div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 px-3 gap-3">
+    
+    <div class="mt-5 bg-white dark:bg-zinc-700 py-16 rounded-xl">
+      <h2 class="font-bold text-5xl text-blue-400 mb-12">
+        Interactive Proposal Template
+      </h2>
+      <a
+        href="/"
+        class="py-4 px-4 bg-blue-400 flex w-fit justify-center gap-3 rounded-lg hover:bg-blue-500 items-center mx-auto text-white transaction-speed"
+        ><i class="fa-solid fa-rocket"></i> Launch Template</a
+      >
+    </div>
+
+    
+    <div class="mt-5 bg-white dark:bg-zinc-700 py-16 rounded-xl">
+      <h2 class="font-bold text-5xl text-teal-400 mb-12">
+        Interactive Proposal Template
+      </h2>
+      <a
+        href="/"
+        class="py-4 px-4 bg-teal-400 flex w-fit justify-center gap-3 rounded-lg hover:bg-teal-500 items-center mx-auto text-white transaction-speed"
+        ><i class="fa-solid fa-rocket"></i> Launch Template</a
+      >
+    </div>
+
+    
+    <div class="mt-5 bg-white dark:bg-zinc-700 py-16 rounded-xl">
+      <h2 class="font-bold text-5xl text-orange-400 mb-12">
+        Interactive Proposal Template
+      </h2>
+      <a
+        href="/"
+        class="py-4 px-4 bg-orange-400 flex w-fit justify-center gap-3 rounded-lg hover:bg-orange-500 items-center mx-auto text-white"
+        ><i class="fa-solid fa-rocket"></i> Launch Template</a
+      >
+    </div>
+
+    
+    <div class="mt-5 bg-white dark:bg-zinc-700 py-16 rounded-xl">
+      <h2 class="font-bold text-5xl text-pink-400 mb-12">
+        Interactive Proposal Template
+      </h2>
+      <a
+        href="/"
+        class="py-4 px-4 bg-pink-400 flex w-fit justify-center gap-3 rounded-lg hover:bg-pink-500 items-center mx-auto text-white"
+        ><i class="fa-solid fa-rocket"></i> Launch Template</a
+      >
+    </div>
+
+    
+    <div class="mt-5 bg-white dark:bg-zinc-700 py-16 rounded-xl">
+      <h2 class="font-bold text-5xl text-blue-400 mb-12">
+        Interactive Proposal Template
+      </h2>
+      <a
+        href="/"
+        class="py-4 px-4 bg-blue-400 flex w-fit justify-center gap-3 rounded-lg hover:bg-blue-500 items-center mx-auto text-white transaction-speed"
+        ><i class="fa-solid fa-rocket"></i> Launch Template</a
+      >
+    </div>
+
+    
+    <div class="mt-5 bg-white dark:bg-zinc-700 py-16 rounded-xl">
+      <h2 class="font-bold text-5xl text-teal-400 mb-12">
+        Interactive Proposal Template
+      </h2>
+      <a
+        href="/"
+        class="py-4 px-4 bg-teal-400 flex w-fit justify-center gap-3 rounded-lg hover:bg-teal-500 items-center mx-auto text-white transaction-speed"
+        ><i class="fa-solid fa-rocket"></i> Launch Template</a
+      >
+    </div>
+
+    
+    <div class="mt-5 bg-white dark:bg-zinc-700 py-16 rounded-xl">
+      <h2 class="font-bold text-5xl text-orange-400 mb-12">
+        Interactive Proposal Template
+      </h2>
+      <a
+        href="/"
+        class="py-4 px-4 bg-orange-400 flex w-fit justify-center gap-3 rounded-lg hover:bg-orange-500 items-center mx-auto text-white"
+        ><i class="fa-solid fa-rocket"></i> Launch Template</a
+      >
+    </div>
+
+    
+    <div class="mt-5 bg-white dark:bg-zinc-700 py-16 rounded-xl">
+      <h2 class="font-bold text-5xl text-pink-400 mb-12">
+        Interactive Proposal Template
+      </h2>
+      <a
+        href="/"
+        class="py-4 px-4 bg-pink-400 flex w-fit justify-center gap-3 rounded-lg hover:bg-pink-500 items-center mx-auto text-white"
+        ><i class="fa-solid fa-rocket"></i> Launch Template</a
+      >
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    
+    <footer
+      class="container mx-auto p-10 text-zinc-400 border-t border-zinc-800"
+    >
+      <div
+        class="grid lg:grid-cols-2 md:gri-cols-2 grid-cols-1 lg:justify-between md:justify-between sm:justify-centerpy-6"
+      >
+        <p class="lg:text-left md:text-left text-center">
+          Copyright © 2023 DocuCollab. |
+          <a href="" class="hover:text-blue-400">Request a demo</a> |
+          <a href="" class="hover:text-blue-400">Blog </a> |
+          <a href="" class="hover:text-blue-400">Terms & conditions</a>
+        </p>
+        <div>
+          <ul
+            class="flex gap-3 lg:justify-end md:justify-end justify-center lg:mt-0 md:mt-0 mt-3"
+          >
+            <li>
+              <a href="https://twitter.com/docucollab" target="_blank"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://facebook.com/DocuCollab" target="_blank"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/docucollab "
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"
+      defer
+    ></script>
+
+    
+    <script src="/js/dark.js"></script>
+    <script src="/js/main.js"></script>
+
+    
+  </body>
+</html>
+
+
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+  >
+    <a href="https://flowbite.com/" class="flex items-center">
+      <img
+        src="https://flowbite.com/docs/images/logo.svg"
+        class="h-8 mr-3"
+        alt="Flowbite Logo"
+      />
+      <span
+        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+        >Flowbite</span
+      >
+    </a>
+    <div class="flex md:order-2">
+      <button
+        type="button"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        Get started
+      </button>
+      <button
+        data-collapse-toggle="navbar-cta"
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-cta"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+      id="navbar-cta"
+    >
+      <ul
+        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+      >
+        <li>
+          <a
+            href="#"
+            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+            aria-current="page"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

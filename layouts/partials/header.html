@@ -90,58 +90,40 @@
 
     <!-- Desktop navigation menu -->
     <ul class="hidden space-x-4 md:flex">
-      <li>
-        <a
-          href="/"
-          class="text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-500"
-          >Home</a
-        >
-      </li>
+      {{ range .Site.Menus.main }}
+      <!---->
+      {{ if .HasChildren }}
       <li class="relative">
         <a
           class="text-gray-800 cursor-pointer dark:text-white hover:text-blue-600 hover:dark:text-blue-500 drop-down"
-          >Solutions</a
+          >{{.Name}}</a
         >
         <ul
           class="absolute hidden p-4 mt-2 space-y-2 bg-white rounded-md shadow-md dark:bg-zinc-800 dropdown w-60 border border-zinc-600 transaction-speed"
         >
+          {{range .Children}}
           <li>
             <a
-              href="/proposal-management-software/"
+              href="{{.URL}}"
               class="block text-gray-800 dark:text-white rounded-lg px-3 py-2 font-medium dark:hover:text-blue-500"
-              >Proposal Management</a
+              >{{.Name}}</a
             >
           </li>
-          <li>
-            <a
-              href="/contract-management-software/"
-              class="block text-gray-800 dark:text-white rounded-lg px-3 py-2 font-medium dark:hover:text-blue-500"
-              >Contract Management</a
-            >
-          </li>
+          {{end}}
         </ul>
       </li>
+      {{else}}
       <li>
         <a
-          href="/features-and-benefits/"
+          href="{{.URL}}"
           class="text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-500"
-          >Features and Benefits</a
+          >{{.Name}}</a
         >
       </li>
-      <li>
-        <a
-          href="/blog/"
-          class="text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-500"
-          >Blog</a
-        >
-      </li>
-      <li>
-        <a
-          href="/contact-sales"
-          class="text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-500"
-          >Contact Us</a
-        >
-      </li>
+
+      {{end}} {{end}}
+
+      <!---->
       <li>
         <a
           href="/book-demo/"
